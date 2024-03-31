@@ -1,0 +1,25 @@
+<div>
+    <h1>Admin Panel</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Last name</th>
+                <th>Date of birth</th>
+                <th>Role</th>
+                <th>Position</th>
+                <th>Education</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let all of allUser; let i = index">
+                <td>{{ all.name + 1 }}</td>
+                <td>{{ all.lastName }}</td>
+                <td>{{ all.dateOfBirth }}</td>
+                <td>{{all.education}}</td>
+                <td>{{ all.position }}</td>
+                <td>{{ all.role }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

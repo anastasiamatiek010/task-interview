@@ -1,0 +1,19 @@
+li {
+    list-style: none;
+}
+
+mat-dialog-actions {
+    justify-content: end;
+}
+
+mat-dialog-content {
+    padding: 10px;
+}
+
+button {
+    background: #aeacac !important;
+    width: 70px;
+    position: absolute;
+    color: black !important;
+    font-weight: 700;
+}

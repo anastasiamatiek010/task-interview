@@ -1,0 +1,44 @@
+<h1>Personal account</h1>
+<div class="account-container">
+    <div class="account-sidebar">
+        <div class="account-value">
+            <h2>User data</h2>
+            <ul>
+                <li>First name: {{ user.first_name }}</li>
+                <li>Last name: {{ user.last_name }}</li>
+                <li>Role: {{ user.role }}</li>
+                <li>Token: {{ user.token }}</li>
+            </ul>
+            <div class="button">
+                <button mat-raised-button color="primary" (click)="exit()">Exit</button>
+            </div>
+        </div>
+    </div>
+    <div class="account-content">
+        <h2>Report</h2>
+        <div class="table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Number</th>
+                        <th>Active</th>
+                        <th>id</th>
+                        <th>Image_url</th>
+                        <th>Name</th>
+                        <th>Users_resolved</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let r of report; let i = index" (click)="getUserAssessmentGraph(i, r.id)">
+                        <td>{{ i + 1 }}</td>
+                        <td>{{ r.active }}</td>
+                        <td>{{ r.id }}</td>
+                        <td><img [src]="r.image_url" alt="{{r.name}}"></td>
+                        <td>{{ r.name }}</td>
+                        <td>{{ r.users_resolved }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

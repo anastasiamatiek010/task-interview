@@ -1,0 +1,37 @@
+.mat-icon-button {
+    background: none;
+    border: 0px;
+    margin-right: 6px;
+}
+
+.example-form {
+    display: flex;
+    flex-direction: column;
+    margin: 23px auto;
+    width: fit-content;
+}
+
+.sign-input {
+    display: flex;
+}
+
+.example-full-width {
+    width: 300px;
+    margin: 10px auto;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:active,
+input:-webkit-autofill:focus {
+    background-color: #FFFFFF !important;
+    color: #555 !important;
+    -webkit-box-shadow: 0 0 0 1000px white inset !important;
+    -webkit-text-fill-color: #555555 !important;
+    border: 1px salmon !important;
+}
+
+.grey {
+    background: #aeacac !important;
+    font-weight: 700;
+}

@@ -1,0 +1,33 @@
+<form class="example-form" [formGroup]="loginForm">
+    <h1>Log in / Sign up</h1>
+    <div class="sign-input">
+        <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Email</mat-label>
+            <input matInput formControlName="email">
+            <mat-error *ngIf="loginForm.controls['email'].hasError('required')">
+                Enter email
+            </mat-error>
+            <mat-error *ngIf="loginForm.controls['email'].hasError('email')">
+                email <strong>is incorrect</strong>
+            </mat-error>
+        </mat-form-field>
+    </div>
+
+    <div class="sign-input">
+        <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Password</mat-label>
+            <input matInput [type]="hide ? 'password' : 'text'" formControlName="password" autocomplete="off">
+            <mat-error *ngIf="loginForm.controls['password'].hasError('required')">
+                Enter password
+            </mat-error>
+            <mat-error *ngIf="loginForm.controls['password'].hasError('pattern')">
+                Minimum <strong>4 characters</strong>
+            </mat-error>
+            <button type="button" mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                [attr.aria-pressed]="hide" class="mat-icon-button">
+                <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+        </mat-form-field>
+    </div>
+    <button class="grey" mat-raised-button type="submit" (click)="onSubmit()" [disabled]="!loginForm.valid">Log in</button>
+</form>
